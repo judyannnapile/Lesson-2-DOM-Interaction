@@ -7,18 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-<header>
-    <h1>Reactivity</h1>
-</header>
-<section id="React">
-    <button @click =" add(5)">Add5</button>
-    <button @click =" Add(1)">Add1</button>
-    <p> Result: {{result()}}</p>
-</section>
+    <header>
+        <h1>Vue Styling</h1>
+    </header>
+    <section id="Styling">
+<div class="demo">
+    <input v-on:keyup="input" type="text" placeholder="user1 OR user2">
+    <div class="output" :class=" [enable ? 'visible' : 'hidden' ]"></div>
+    <p :class="user"> Style Me</p>
+</div>
+<button v-on:click="toggleParagraph"> Toggle Paragraph</button>
+<input v-on:keyup="PickColor" type="text" placeholder="blue/black/green">
+<p :style="{backgroundColor : keycolor}">Style me Inline</p>
+    </section>
 
 
-
-<script src="https://unpkg.com/vue@3.2.20"></script>
+    <script src="http:/unpkg.com/vue@3.2.20"></script>
     <script src="app.js"></script>
     <link rel="stylesheet" href="style.css">
 </body>

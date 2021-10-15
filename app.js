@@ -1,39 +1,46 @@
-const app =Vue.createApp({
+const app = Vue.createApp({
 data(){
     return{
-counter:0,
+            user:'',
+            user1:false,
+            user2:false,
+            enable:true,
+            color:'',
+            keycolor:'',
+
     };
 },
+
 methods:{
-    add(){
-        this.counter = this.counter+5;
+    input(event){
+        this.user=event.target.value;
+        if (this.user === 'user1'){
+            this.user1= !this.user1
+        }else if (this.user === 'user2'){
+            this.user2= !this.user2
+        }else {
+            this.user1=''
+            this.user2=''
+        }
     },
-    Add(){
-        this.counter = this.counter+1;
+    toggleParagraph(){
+        this.enable = !this.enable
     },
-    result(){
-        if (this.counter==0){
-            return this.counter;
-        }else if(this.counter > 37){
-            return 'too much';
-        }else if(this.counter > 0 && this.counter < 37){
-            return 'almost there';
-        }return this.counter;
-
-    }
-},
-
-watch: {
-    counter(value){
-        if (value > 37){
-            const that = this;
-            setTimeout(function(){
-                that.counter = 0;
-            }, 5000);
-
+    PickColor(event){
+        this.color=event.target.value;
+        if(this.color==='green'){
+            this.keycolor=this.color
+        } 
+        else  if(this.color==='black'){
+            this.keycolor=this.color
+        }
+         else if(this.color==='blue'){
+            this.keycolor=this.color
+        }else{
+            this.keycolor=''
         }
     }
-},
-    
+}
+
 });
-app.mount('#React');
+app.mount('#Styling');
