@@ -7,23 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <header>
-        <h1> Event</h1>
-    </header>
-    <section id="Event">
-        <h2>practice event</h2>
-        <form v-on:submit="submitform">
-            <button>show alert</button>
-        </form>
-        <input type="text" v-on:input="myoutput1">
-        <p>{{name1}}</p>
-        <input type="text" v-on:input="myoutput" v-on:keyup.enter="enterText">
-        <p>{{name}}</p>
-    </section>
+<header>
+    <h1>Reactivity</h1>
+</header>
+<section id="React">
+    <button @click =" add(5)">Add5</button>
+    <button @click =" Add(1)">Add1</button>
+    <p> Result: {{result()}}</p>
+</section>
 
 
-    <script src="https://unpkg.com/vue@3.2.20"></script>
+
+<script src="https://unpkg.com/vue@3.2.20"></script>
     <script src="app.js"></script>
     <link rel="stylesheet" href="style.css">
 </body>

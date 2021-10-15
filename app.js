@@ -1,24 +1,39 @@
-const app = Vue.createApp({
+const app =Vue.createApp({
 data(){
     return{
-        name:'',
-        name1:'',
+counter:0,
     };
 },
 methods:{
-    submitform(){
-        alert( 'I will pass this Semester');
+    add(){
+        this.counter = this.counter+5;
     },
-    myoutput(){
-        this.enterText = this.name;
+    Add(){
+        this.counter = this.counter+1;
     },
-    myoutput1(Event){
-        this.name1=Event.target.value;
-    },
-    enterText(Event){
-        this.name=Event.target.value;
-    }
-}
+    result(){
+        if (this.counter==0){
+            return this.counter;
+        }else if(this.counter > 37){
+            return 'too much';
+        }else if(this.counter > 0 && this.counter < 37){
+            return 'almost there';
+        }return this.counter;
 
+    }
+},
+
+watch: {
+    counter(value){
+        if (value > 37){
+            const that = this;
+            setTimeout(function(){
+                that.counter = 0;
+            }, 5000);
+
+        }
+    }
+},
+    
 });
-app.mount('#Event');
+app.mount('#React');

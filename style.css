@@ -6,52 +6,34 @@
 h1{
     font-size: 50px;
     font-style: italic;
-    background-color: aqua;
-    color: black;
+    background-color: black;
+    color: orange;
     border-radius: 20px;
     margin: 20px;
     padding:30px;
-  
 
 }
 section{
- 
     font-size: 20px;
     font-style: normal;
-    background-color: aqua;
-    color: black;
+    background-color: black;
+    color: orange;
     border-radius: 20px;
     margin: 20px;
     padding:30px;
-  
-}
-h2{
-    font-size: 30px;
-    font-style: italic;
-    background-color:black;
-    color: aqua;
-    border-radius: 20px;
-    margin: auto;
-    padding:30px;
 }
 button{
-    background-color:black;
-    color: aqua;
+    background-color:orange;
+    color: black;
     border-radius: 20px;
     margin: 10px;
     padding: 20px;
-     }
-     input{
-        background-color:black;
-        color: aqua;
-        border-radius: 20px;
-        margin: auto;
-        padding: 10px;
-     }
-     p{
-        background-color:red;
-        color: aqua;
-        border-radius: 20px;
-        margin: 10px;
-        padding: 5px;
-     }
+    font-style: normal;
+   }
+   p{
+    background-color:aqua;
+    color: black;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 5px;
+ }
