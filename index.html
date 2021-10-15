@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-  
-    <section id="Data">
-        <h2>My Name: {{name}}</h2>
-
-        <p> my age: {{age}} </p>
-        <p> my age after 5 years: {{after5 (5)}} </p>
-        <p> my favorite num: {{myfav (num1,num2)}} </p>
-        <div>
-            <img src="some image">
-        </div>
-        <form class="box" action="index.html" method="POST">
-            <input type="text" @value="name">
+    
+    <header>
+        <h1> Event</h1>
+    </header>
+    <section id="Event">
+        <h2>practice event</h2>
+        <form v-on:submit="submitform">
+            <button>show alert</button>
         </form>
+        <input type="text" v-on:input="myoutput1">
+        <p>{{name1}}</p>
+        <input type="text" v-on:input="myoutput" v-on:keyup.enter="enterText">
+        <p>{{name}}</p>
     </section>
+
+
     <script src="https://unpkg.com/vue@3.2.20"></script>
     <script src="app.js"></script>
     <link rel="stylesheet" href="style.css">

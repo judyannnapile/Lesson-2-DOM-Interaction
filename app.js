@@ -1,27 +1,24 @@
 const app = Vue.createApp({
 data(){
     return{
-        num1:'',
-        num2:'',
-        name:'Judy Ann Napile',
-        age:22,
+        name:'',
+        name1:'',
     };
 },
 methods:{
-    setName(Data){
-        this.name=Data.target.value;
+    submitform(){
+        alert( 'I will pass this Semester');
     },
-    after5(num){
-        const totalage=this.age+num
-        return totalage
+    myoutput(){
+        this.enterText = this.name;
     },
-    myfav(num1,num2){
-        const randomnum = Math.random
-        (num1,num2)
-        return randomnum
+    myoutput1(Event){
+        this.name1=Event.target.value;
+    },
+    enterText(Event){
+        this.name=Event.target.value;
     }
-
 }
 
 });
-app.mount('#Data');
+app.mount('#Event');
